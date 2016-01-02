@@ -19,9 +19,21 @@ class ExercisesController < ApplicationController
       flash[:danger] = 'Exercise has not been created'
       render :new
     end
+  end
 
-    def show
+  def show
+  end
 
+  def edit
+  end
+
+  def update
+    if @exercise.update(exercise_params)
+      flash[:success] = 'Exercise has been updated'
+      redirect_to [current_user, @exercise]
+    else
+      flash[:danger] = 'Exercise has not been updated'
+      render :edit
     end
   end
 

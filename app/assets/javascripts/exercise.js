@@ -1,6 +1,5 @@
 $(document).ready(function(){
    $('#exercise_workout_date').datepicker({ dateFormat: 'yy-mm-dd' });
-    alert("test");
 
     new Morris.Line({
         element: 'chart',
